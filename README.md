@@ -140,8 +140,8 @@ To capture existing data in a file by using the mysqldump utility, run the follo
 <br />
 
 When prompted for the database password, paste the dbPassword value from the Secrets Manager secrets.
-To confirm that mysqldump succeeded, run the ls command in the terminal. 
-To see the contents of the file, run the cat CafeDbDump.sql command.
+To confirm that mysqldump succeeded, run the "ls" command in the terminal. 
+To see the contents of the file, run the "cat CafeDbDump.sql" command.
 
 <h3>In the next step, you import this data into the new RDS database.</h3>
 
@@ -154,10 +154,10 @@ Click your instance name
 Copy the Endpoint (e.g., cafe-db.abcd1234.us-west-2.rds.amazonaws.com)
 
 To allow your EC2 instance to connect to your Amazon RDS (MariaDB) database, you need to set a security group rule that allows inbound access on port 3306.
-✅ The Rule You Need:
-🔒 Inbound Rule for RDS Security Group
-Type	Protocol	Port Range	Source	Description
-MySQL/Aurora	TCP	3306	The EC2 instance's security group ID or its private IP	Allow EC2 to connect to RDS
+- ✅ The Rule You Need:
+- 🔒 Inbound Rule for RDS Security Group
+- Type	Protocol	Port Range	Source	Description
+- MySQL/Aurora	TCP	3306	The EC2 instance's security group ID or its private IP	Allow EC2 to connect to RDS
 
 <h2>💡 How to Add It (Console):</h2>
 Go to the VPC → Security Groups in AWS Console.
